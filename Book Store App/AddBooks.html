@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+        }
+
+        h2 {
+            color: #1640D6;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #1640D6;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #001B79;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add New Books</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <label for="recipe-name">Book Name</label>
+            <input type="text" id="recipe-name" name="recipe-name" required>
+
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+                <option value="">Select a category</option>
+                <option value="volvo">Novel Book</option>
+                <option value="saab">Love Stories</option>
+                <option value="opel">Motivational</option>
+                <option value="audi">Religulous</option>
+            </select>
+
+            <label for="price">Price*</label>
+            <input type="text" id="price" name="price" required>
+
+            <label for="recipe-details">Recipe Details</label>
+            <textarea id="recipe-details" name="recipe-details" rows="4" placeholder="Tell the world about your recipe"></textarea>
+
+            <label for="file">Upload Image</label>
+            <input type="file" id="file" name="file">
+
+            <button type="submit" class="btn">Add Book</button>
+        </form>
+    </div>
+</body>
+</html>
